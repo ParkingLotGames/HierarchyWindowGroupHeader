@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 
 [InitializeOnLoad]
-public class HierarchyWindowGroupHeader : Editor
+public static class HierarchyWindowGroupHeader
 {
     static HierarchyWindowGroupHeader()
     {
@@ -19,4 +19,4 @@ public class HierarchyWindowGroupHeader : Editor
             EditorGUI.DropShadowLabel(selectionRect, gameObject.name.Replace("-", "").ToUpperInvariant());
         }
     }
-}   
+}
