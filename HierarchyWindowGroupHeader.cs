@@ -1,26 +1,42 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 
 /// <summary>
-/// Hierarchy Window Group Header
+/// This class adds headers to the hierarchy window in Unity to group objects together.
+/// It is a slightly modified version of Hierarchy Window Group Header
 /// http://diegogiacomelli.com.br/unitytips-hierarchy-window-group-header
 /// </summary>
-[InitializeOnLoad]
-public static class HierarchyWindowGroupHeader
+namespace DevTools.Editor   
 {
-    static HierarchyWindowGroupHeader()
+    [InitializeOnLoad]
+    public static class HeadersInHierarchy
     {
-        EditorApplication.hierarchyWindowItemOnGUI += HierarchyWindowItemOnGUI;
-    }
+        /// <summary>
+        /// The color of the header background , 90% black.
+        /// </summary>
+        static Color kblack = new Color(.1f, .1f, .1f, 1); 
 
-    static void HierarchyWindowItemOnGUI(int instanceID, Rect selectionRect)
-    {
-        var gameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
-
-        if (gameObject != null && gameObject.name.StartsWith("---", System.StringComparison.Ordinal))
+        static HeadersInHierarchy()
         {
-            EditorGUI.DrawRect(selectionRect, Color.gray);
-            EditorGUI.DropShadowLabel(selectionRect, gameObject.name.Replace("-", "").ToUpperInvariant());
+            EditorApplication.hierarchyWindowItemOnGUI += HierarchyWindowItemOnGUI;
+        }
+
+        /// <summary>
+        /// Handles the GUI display for each item in the hierarchy window.
+        /// </summary>
+        /// <param name="instanceID">The instance ID of the object in the hierarchy.</param>
+        /// <param name="selectionRect">The rectangle representing the object in the hierarchy.</param>
+        static void HierarchyWindowItemOnGUI(int instanceID, Rect selectionRect)
+        {
+            var gameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
+
+            if (gameObject != null && gameObject.name.StartsWith("-", System.StringComparison.Ordinal))
+            {
+                EditorGUI.DrawRect(selectionRect, kblack);
+                EditorGUI.DropShadowLabel(selectionRect, gameObject.name.Replace("-", "").ToUpperInvariant());
+            }
         }
     }
 }
+#endif
