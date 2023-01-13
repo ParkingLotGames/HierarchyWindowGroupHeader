@@ -1,0 +1,10 @@
+{
+    "name": "com.parkinglotgames.hierarchywindowgroupheader",
+    "displayName": "Hierarchy Window Group Header",
+    "version": "1.0.0",
+    "documentationUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader",
+    "changelogUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader/releases",
+    "licensesUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader/blob/master/LICENSE",
+    "description": "A Hierarchy extension that shows Game Objects starting in '-' as headers, in a black box with bold, hi-caps font",
+    "hideInEditor": false
+  }
