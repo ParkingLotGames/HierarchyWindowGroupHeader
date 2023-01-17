@@ -1,10 +1,22 @@
 {
-    "name": "com.parkinglotgames.hierarchywindowgroupheader",
-    "displayName": "Hierarchy Window Group Header",
-    "version": "1.0.0",
-    "documentationUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader",
-    "changelogUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader/releases",
-    "licensesUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader/blob/master/LICENSE",
-    "description": "A Hierarchy extension that shows Game Objects starting in '-' as headers, in a black box with bold, hi-caps font",
-    "hideInEditor": false
+  "name": "com.parkinglotgames.hierarchywindowgroupheader",
+  "version": "1.0.0",
+  "displayName": "Hierarchy Window Group Header",
+  "description": "A Hierarchy extension that shows Game Objects starting in '-' as headers, in a black box with bold, hi-caps font",
+  "unity": "2017.1",
+  "unityRelease": "0f3",
+  "documentationUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader",
+  "changelogUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader/releases",
+  "licensesUrl": "https://github.com/ParkingLotGames/HierarchyWindowGroupHeader/blob/master/LICENSE",
+  "keywords": [
+    "Hierarchy",
+    "Editor",
+    "Editor Tools"
+  ],
+  "dependencies": {},
+  "author": {
+    "name": "Parking Lot Games",
+    "email": "parkinglotstudiogames@gmail.com",
+    "url": "https://github.com/ParkingLotGames"
   }
+}
